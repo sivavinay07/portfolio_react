@@ -26,7 +26,19 @@ const projectsData = [
     link: 'https://joke-generator-pied.vercel.app/',
     sourceCodeLink: 'https://github.com/vinayzxcvb/joke-generator.git', // TODO: Replace with your actual source code link
     description: null
-  }
+  },
+  {
+    title: "Mint-clone",
+    link: "#",
+    sourceCodeLink: "https://github.com/sivavinay07/mint-clone.git",
+    description: null,
+  },
+  {
+    title: "Trip-advisor-clone",
+    link: "#",
+    sourceCodeLink: "https://github.com/sivavinay07/TripAdvisor-clone.git",
+    description: null,
+  },
 ];
 
 const Projects = () => {
