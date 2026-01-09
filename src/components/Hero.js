@@ -47,7 +47,7 @@ const Hero = () => {
       {/* Social Media Links - DESKTOP VIEW */}
       {/* This block is hidden by default and shown as a flex container on medium screens and up (hidden md:flex) */}
       <div className="hidden md:flex absolute bottom-16 right-16 gap-6 text-3xl z-20">
-        <a href="https://github.com/vinayzxcvb" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 hover:drop-shadow-[0_0_10px_rgba(156,163,175,0.8)] transition duration-300">
+        <a href="https://github.com/sivavinay07" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 hover:drop-shadow-[0_0_10px_rgba(156,163,175,0.8)] transition duration-300">
           <i className="fab fa-github"></i>
         </a>
         <a href="https://www.instagram.com/_siva_vinay_07/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-500 hover:drop-shadow-[0_0_10px_rgba(236,72,153,0.8)] transition duration-300">
