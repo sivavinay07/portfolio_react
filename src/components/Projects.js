@@ -39,6 +39,13 @@ const projectsData = [
     sourceCodeLink: "https://github.com/sivavinay07/TripAdvisor-clone.git",
     description: null,
   },
+  {
+    title: "Foody",
+    link: "https://foodbuddy-t388.onrender.com/",
+    sourceCodeLink: "https://github.com/sivavinay07/FoodBuddy.git",
+    description: 'built using MERN',
+  },
+  
 ];
 
 const Projects = () => {
