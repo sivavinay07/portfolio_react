@@ -250,15 +250,133 @@ body {
 .project-card:hover .project-desc-hover { opacity: 1; transform: translateY(0); }
 
 /* Skills */
-.skill-category-title { color: var(--accent-primary); font-size: 1.75rem; font-weight: 600; text-align: center; margin-top: 3rem; margin-bottom: 1.5rem; position: relative; }
-.skill-category-title::after { content: ''; display: block; width: 70px; height: 4px; background-color: var(--accent-primary); border-radius: 2px; margin: 0.6rem auto 0; }
-.skill-category-title:first-of-type { margin-top: 1rem; }
-.skills-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-.skill { background: var(--skill-bg); color: var(--skill-text); border-radius: 12px; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.2s ease, box-shadow 0.2s ease; width: 120px; height: 120px; padding: 1rem; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.75rem; }
-.skill:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
-.skill-icon { height: 3rem; width: 3rem; object-fit: contain; }
+/* Skills */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--skill-text);
+}
+
+/* --- Category Title --- */
+.skill-category-title {
+  color: var(--accent-primary);
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.skill-category-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-primary);
+  border-radius: 2px;
+  margin: 0.6rem auto 0;
+  opacity: 0.7;
+}
+
+/* --- Grid Layout --- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* Increased gap for breathing room */
+}
+
+/* The wrapper for individual skill items (Card + Bar) */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 120px; /* Fixed width ensures bars are same size as cards */
+}
+
+/* --- Skill Card --- */
+.skill-card {
+  background: var(--skill-bg);
+  color: var(--skill-text);
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  width: 100%;
+  height: 120px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-primary);
+}
+
+.skill-icon {
+  height: 3.5rem;
+  width: 3.5rem;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1);
+}
+
+/* --- Progress Bar Styling --- */
+.skill-progress-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.skill-progress-track {
+  width: 100%;
+  background-color: var(--track-bg);
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary));
+  border-radius: 10px;
+  width: 0%; /* Start at 0 for animation */
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+.skill-percentage-text {
+  font-size: 0.8rem;
+  color: #888;
+  align-self: flex-end;
+  font-weight: 500;
+}
+
+/* --- Animation Keyframes --- */
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: var(--target-width); }
+}
+
+/* Filters */
 .skill-icon[src*="svgrepo"] { filter: invert(1); }
-body.light .skill-icon[src*="laravel"] { filter: invert(1); } /* Specific fix for Laravel logo on light mode */
+body.light .skill-icon[src*="laravel"] { filter: invert(1); }
+ /* Specific fix for Laravel logo on light mode */
 
 /* Contact Form */
 .form-container { padding: 2rem 0; }
